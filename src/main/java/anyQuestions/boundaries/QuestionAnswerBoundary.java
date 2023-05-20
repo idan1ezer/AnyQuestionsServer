@@ -8,20 +8,21 @@ public class QuestionAnswerBoundary {
 //	    private String courseId;
 //	    private String groupId;
 //	    private String lectureId;
-
+		private String id;
 	    private String question;
 	    private String answer;
 	    private int likes;
-	    private Date timestamp;
+	    private String timestamp;
 	    
 	    public QuestionAnswerBoundary() {
 	    	
 	    }
 
-	    public QuestionAnswerBoundary( String question, String answer, int likes, Date timestamp) {
+	    public QuestionAnswerBoundary( String id, String question, String answer, int likes, String timestamp) {
 //	        this.courseId = courseId;
 //	        this.groupId = groupId;
 //	        this.lectureId = lectureId;
+			this.id = id;
 	        this.question = question;
 	        this.answer = answer;
 	        this.likes = likes;
@@ -56,7 +57,13 @@ public class QuestionAnswerBoundary {
 //	    public void setLectureId(String lectureId) {
 //	        this.lectureId = lectureId;
 //	    }
+		public String getId(){
+			return this.id;
+		}
 
+		public void setId(String id){
+			this.id = id;
+		}
 	    public String getQuestion() {
 	        return question;
 	    }
@@ -81,24 +88,22 @@ public class QuestionAnswerBoundary {
 	        this.likes = likes;
 	    }
 
-	    public Date getTimestamp() {
+	    public String getTimestamp() {
 	        return timestamp;
 	    }
 
-	    public void setTimestamp(Date timestamp) {
+	    public void setTimestamp(String timestamp) {
 	        this.timestamp = timestamp;
 	    }
 
-	    @Override
-	    public String toString() {
-	        return "QuestionAnswer{" +
-//	                ", courseId='" + courseId + '\'' +
-//	                ", groupId='" + groupId + '\'' +
-//	                ", lectureId='" + lectureId + '\'' +
-	                ", question='" + question + '\'' +
-	                ", Answer='" + answer + '\'' +
-	                ", likes=" + likes +
-	                ", timestamp=" + timestamp +
-	                '}';
-	    }
+	@Override
+	public String toString() {
+		return "QuestionAnswerBoundary{" +
+				"id='" + id + '\'' +
+				", question='" + question + '\'' +
+				", answer='" + answer + '\'' +
+				", likes=" + likes +
+				", timestamp=" + timestamp +
+				'}';
+	}
 }

@@ -1,6 +1,7 @@
 package anyQuestions;
 
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.boot.SpringApplication;
@@ -29,14 +30,14 @@ public class AnyQuestionsApplication {
 	    CourseCrud ccrud = configurableApplicationContext.getBean(CourseCrud.class);
 	    LectureCrud lcrud = configurableApplicationContext.getBean(LectureCrud.class);
 	    QuestionAnswerCrud qcrud = configurableApplicationContext.getBean(QuestionAnswerCrud.class);
-	    
-	    QuestionAnswerEntity q1 = new QuestionAnswerEntity("11111101QA1", "What is Infinitesimal Math??", "Infinitesimal Math is a branch of mathematics that deals with infinitesimal quantities.", 5, null, 1);
-	    QuestionAnswerEntity q2 = new QuestionAnswerEntity("11111101QA2", "What is an infinitesimal?", "An infinitesimal is a quantity that is extremely small, but not zero.", 4, null, 2);
-	    QuestionAnswerEntity q3 = new QuestionAnswerEntity("11111102QA1", "Who is considered the father of Infinitesimal Math?", "The father of Infinitesimal Math is considered to be the German mathematician Gottfried Wilhelm Leibniz.", 3, null, 3);
-	    QuestionAnswerEntity q4 = new QuestionAnswerEntity("11111103QA1", "What is the concept of infinitesimal calculus?", "The concept of infinitesimal calculus involves using infinitesimals to calculate the behavior of functions and curves.", 2, null, 4);
-	    QuestionAnswerEntity q5 = new QuestionAnswerEntity("11111103QA2", "How is Infinitesimal Math different from traditional calculus?", "Infinitesimal Math is different from traditional calculus in that it relies on the use of infinitesimals rather than limits.", 1, null, 5);
-	    QuestionAnswerEntity q6 = new QuestionAnswerEntity("11111103QA3", "What is the controversy surrounding the use of infinitesimals in math?", "The controversy surrounding the use of infinitesimals in math stems from their lack of rigor and formal definition.", 5, null, 1);
-	    QuestionAnswerEntity q7 = new QuestionAnswerEntity("11112201QA1", "How did mathematicians resolve the controversy over infinitesimals?", "How did mathematicians resolve the controversy over infinitesimals?", 4, null, 2);
+	    Date date = new Date();
+	    QuestionAnswerEntity q1 = new QuestionAnswerEntity("11111101QA1", "What is Infinitesimal Math??", "Infinitesimal Math is a branch of mathematics that deals with infinitesimal quantities.", 5, date, 1);
+	    QuestionAnswerEntity q2 = new QuestionAnswerEntity("11111101QA2", "What is an infinitesimal?", "An infinitesimal is a quantity that is extremely small, but not zero.", 4, date, 2);
+	    QuestionAnswerEntity q3 = new QuestionAnswerEntity("11111102QA1", "Who is considered the father of Infinitesimal Math?", "The father of Infinitesimal Math is considered to be the German mathematician Gottfried Wilhelm Leibniz.", 3, date, 3);
+	    QuestionAnswerEntity q4 = new QuestionAnswerEntity("11111103QA1", "What is the concept of infinitesimal calculus?", "The concept of infinitesimal calculus involves using infinitesimals to calculate the behavior of functions and curves.", 2, date, 4);
+	    QuestionAnswerEntity q5 = new QuestionAnswerEntity("11111103QA2", "How is Infinitesimal Math different from traditional calculus?", "Infinitesimal Math is different from traditional calculus in that it relies on the use of infinitesimals rather than limits.", 1, date, 5);
+	    QuestionAnswerEntity q6 = new QuestionAnswerEntity("11111103QA3", "What is the controversy surrounding the use of infinitesimals in math?", "The controversy surrounding the use of infinitesimals in math stems from their lack of rigor and formal definition.", 5, date, 1);
+	    QuestionAnswerEntity q7 = new QuestionAnswerEntity("11112201QA1", "How did mathematicians resolve the controversy over infinitesimals?", "How did mathematicians resolve the controversy over infinitesimals?", 4, date, 2);
 //	    QuestionAnswerEntity q8 = new QuestionAnswerEntity("11112202QA1", "What is a hyperreal number?", "A hyperreal number is a number that is larger than any real number but smaller than infinity.", 3, null, 3, 3);
 //	    QuestionAnswerEntity q9 = new QuestionAnswerEntity("11112202QA2", "How are hyperreal numbers used in Infinitesimal Math?", "Hyperreal numbers are used in Infinitesimal Math to provide a rigorous foundation for the use of infinitesimals.", 2, null, 4, 4);
 //	    QuestionAnswerEntity q10 = new QuestionAnswerEntity("11112203QA1", "What is the transfer principle?", "The transfer principle is a key principle of non-standard analysis that allows statements about infinitesimals to be transferred to statements about real numbers.", 1, null, 5, 5);
@@ -151,12 +152,12 @@ public class AnyQuestionsApplication {
 //	    g6.setCourse(c3);
 //	    g7.setCourse(c3);
 
-	    LectureEntity l1 = new LectureEntity(11111101, false, null, 1);
-	    LectureEntity l2 = new LectureEntity(11111102, false, null, 2);
-	    LectureEntity l3 = new LectureEntity(11111103, true, null, 3);
-	    LectureEntity l4 = new LectureEntity(11112201, false, null, 4);
-	    LectureEntity l5 = new LectureEntity(11112202, true, null, 1);
-	    LectureEntity l6 = new LectureEntity(11112203, true, null, 2);
+	    LectureEntity l1 = new LectureEntity(11111101, false, date, 1);
+	    LectureEntity l2 = new LectureEntity(11111102, false, date, 2);
+	    LectureEntity l3 = new LectureEntity(11111103, true, date, 3);
+	    LectureEntity l4 = new LectureEntity(11112201, false, date, 4);
+	    LectureEntity l5 = new LectureEntity(11112202, true, date, 1);
+	    LectureEntity l6 = new LectureEntity(11112203, true, date, 2);
 //	    LectureEntity l7 = new LectureEntity(11112204, true, null, 3);
 //	    LectureEntity l8 = new LectureEntity(11113301, false, null, 4);
 //	    LectureEntity l9 = new LectureEntity(11113302, true, null, 1);

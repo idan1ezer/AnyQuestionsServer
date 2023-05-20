@@ -25,7 +25,7 @@ public class UserConverter {
 		entity.setPassword(userBoundary.getPassword());
 		entity.setType(userBoundary.getType());
 		entity.setActive(userBoundary.getActive());
-		entity.setCreatedTimestamp(userBoundary.getCreatedTimestamp());
+		//entity.setCreatedTimestamp(userBoundary.getCreatedTimestamp());
 		
 		return entity;
 	}
@@ -37,7 +37,7 @@ public class UserConverter {
 		boundary.setPassword(userEntity.getPassword());
 		boundary.setType(userEntity.getType());
 		boundary.setActive(userEntity.getActive());
-		boundary.setCreatedTimestamp(userEntity.getCreatedTimestamp());
+		boundary.setCreatedTimestamp(userEntity.getCreatedTimestamp().toString());
 		GroupConverter converter = new GroupConverter();
 //		 GroupBoundary[] boundaries = new GroupBoundary[userEntity.getGroups().length]; 
 //		 for(int i=0; i<boundaries.length; i++) { 

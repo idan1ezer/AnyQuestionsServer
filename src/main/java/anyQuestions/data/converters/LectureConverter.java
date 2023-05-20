@@ -16,17 +16,17 @@ public class LectureConverter {
 		LectureEntity entity = new LectureEntity();
 		entity.setLectureNumber(boundary.getLectureNumber());
 		entity.setPermission(boundary.getPermission());
-		entity.setTimestamp(boundary.getTimestamp());
+		//entity.setTimestamp(boundary.getTimestamp());
 		
 		return entity;
 	}
 	
 	public LectureBoundary toBoundary(LectureEntity entity) {
 		LectureBoundary boundary = new LectureBoundary();
-		boundary.setId(entity.getId());
+		boundary.setId(String.valueOf(entity.getId()));
 		boundary.setLectureNumber(entity.getLectureNumber());
 		boundary.setPermission(entity.getPermission());
-		boundary.setTimestamp(entity.getTimestamp());
+		boundary.setTimestamp(entity.getTimestamp().toString());
 		QuestionAnswerConverter converter = new QuestionAnswerConverter();
 		List<QuestionAnswerBoundary>boundaries = new ArrayList<>();
 		for(int i=0; i<entity.getQuestions().size(); i++) {

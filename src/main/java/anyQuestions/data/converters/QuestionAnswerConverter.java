@@ -24,14 +24,14 @@ public class QuestionAnswerConverter {
 	
 	public QuestionAnswerBoundary toBoundary(QuestionAnswerEntity questionAnswerEntity) {
 		QuestionAnswerBoundary boundary = new QuestionAnswerBoundary();
-		
+		boundary.setId(questionAnswerEntity.getId());
 		boundary.setQuestion(questionAnswerEntity.getQtranscript());
 		boundary.setAnswer(questionAnswerEntity.getAtranscript());
 //		boundary.setCourseId(questionAnswerEntity.getCourseId());
 //		boundary.setGroupId(questionAnswerEntity.getGroupId());
 //		boundary.setLectureId(questionAnswerEntity.getLectureId());
 		boundary.setLikes(questionAnswerEntity.getLikes());
-		
+		boundary.setTimestamp(questionAnswerEntity.getTimestamp().toString());
 		
 		return boundary;
 	}
