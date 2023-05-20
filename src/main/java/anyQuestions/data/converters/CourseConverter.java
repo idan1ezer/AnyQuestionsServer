@@ -35,7 +35,7 @@ public class CourseConverter {
 	
 	public CourseBoundary toBoundary(CourseEntity entity) {
 		CourseBoundary boundary = new CourseBoundary();
-		
+		boundary.setId(entity.getId());
 		boundary.setName(entity.getName());
 		List<GroupBoundary>groupsBoundaries = new ArrayList<>();
 		GroupConverter converter = new GroupConverter();

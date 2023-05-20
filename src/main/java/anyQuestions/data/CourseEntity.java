@@ -18,10 +18,10 @@ import javassist.expr.NewArray;
 
 
 @Entity
-@Table(name = "Courses_Table")
+@Table(name = "Courses")
 public class CourseEntity {
 	@Id
-	@Column(name = "course_id")
+	@Column(name = "id")
 	private String id;
 	@Column(name = "name", nullable = false)
     private String name;

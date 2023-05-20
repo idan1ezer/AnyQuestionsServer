@@ -4,11 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -17,13 +14,13 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name = "Lectures_Table")
+@Table(name = "Lectures")
 public class LectureEntity {
 	@Id
-    @Column(name = "lecture_id")
+    @Column(name = "id")
 	private long id;
-	@Column(name = "is_Live", nullable = false)
-    private boolean isLive;
+	@Column(name = "permission", nullable = false)
+    private boolean permission;
 	@Column(name = "timestamp", nullable = true)
     private Date timestamp;
 	@Column(name = "lecture_Number", nullable = false)
@@ -41,10 +38,10 @@ public class LectureEntity {
     }
     
 
-    public LectureEntity(long id, boolean isLive, Date timestamp, int lectureNumber) {
+    public LectureEntity(long id, boolean permission, Date timestamp, int lectureNumber) {
 		super();
 		this.id = id;
-		this.isLive = isLive;
+		this.permission = permission;
 		this.timestamp = timestamp;
 		this.lectureNumber = lectureNumber;
 	}
@@ -58,12 +55,12 @@ public class LectureEntity {
         this.id = id;
     }
 
-    public boolean getIsLive() {
-        return isLive;
+    public boolean getPermission() {
+        return permission;
     }
 
-    public void setIsLive(boolean live) {
-        isLive = live;
+    public void setPermission(boolean live) {
+        permission = live;
     }
    
 	public Date getTimestamp() {
@@ -103,7 +100,7 @@ public class LectureEntity {
 
 	 @Override
 		public String toString() {
-			return "LectureEntity [id=" + id + ", isLive=" + isLive + ", timestamp=" + timestamp + ", lectureNumber="
+			return "LectureEntity [id=" + id + ", isLive=" + permission + ", timestamp=" + timestamp + ", lectureNumber="
 					+ lectureNumber + ", group=" + group + ", questions=" + questions + "]";
 		}
 

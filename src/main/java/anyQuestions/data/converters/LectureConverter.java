@@ -15,7 +15,7 @@ public class LectureConverter {
 	public LectureEntity toEntity(LectureBoundary boundary) {
 		LectureEntity entity = new LectureEntity();
 		entity.setLectureNumber(boundary.getLectureNumber());
-		entity.setIsLive(boundary.getIsLive());
+		entity.setPermission(boundary.getPermission());
 		entity.setTimestamp(boundary.getTimestamp());
 		
 		return entity;
@@ -23,8 +23,9 @@ public class LectureConverter {
 	
 	public LectureBoundary toBoundary(LectureEntity entity) {
 		LectureBoundary boundary = new LectureBoundary();
+		boundary.setId(entity.getId());
 		boundary.setLectureNumber(entity.getLectureNumber());
-		boundary.setIsLive(entity.getIsLive());
+		boundary.setPermission(entity.getPermission());
 		boundary.setTimestamp(entity.getTimestamp());
 		QuestionAnswerConverter converter = new QuestionAnswerConverter();
 		List<QuestionAnswerBoundary>boundaries = new ArrayList<>();

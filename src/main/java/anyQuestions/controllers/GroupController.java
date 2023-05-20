@@ -8,14 +8,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import anyQuestions.boundaries.GroupBoundary;
-import anyQuestions.services.jpaGroupService;
+import anyQuestions.services.JpaGroupService;
 
 @RestController
 public class GroupController {
-	jpaGroupService service;
+	JpaGroupService service;
 	
 	@Autowired
-	public GroupController(jpaGroupService service) {
+	public GroupController(JpaGroupService service) {
 		this.service = service;
 	}
 	

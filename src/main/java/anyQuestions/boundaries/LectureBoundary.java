@@ -7,7 +7,7 @@ import java.util.List;
 public class LectureBoundary {
 	
 	private long id;
-    private boolean isLive;
+    private boolean permission;
     private Date timestamp;
     private int lectureNumber;
     private List<QuestionAnswerBoundary>summary = new ArrayList<>();
@@ -25,12 +25,12 @@ public class LectureBoundary {
         this.id = id;
     }
 
-    public boolean getIsLive() {
-        return isLive;
+    public boolean getPermission() {
+        return permission;
     }
 
-    public void setIsLive(boolean live) {
-        isLive = live;
+    public void setPermission(boolean live) {
+        permission = live;
     }
 
 
@@ -61,7 +61,7 @@ public class LectureBoundary {
 
 	@Override
 	public String toString() {
-		return "LectureBoundary [id=" + id + ", permission=" + isLive + ", timestamp=" + timestamp + ", summary=" + summary + "]";
+		return "LectureBoundary [id=" + id + ", permission=" + permission + ", timestamp=" + timestamp + ", summary=" + summary + "]";
 	}
     
 

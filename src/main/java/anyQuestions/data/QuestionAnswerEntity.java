@@ -14,12 +14,12 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name = "Questions_Table")
+@Table(name = "Questions_Answers")
 public class QuestionAnswerEntity {
 	
 
 	@Id
-    @Column(name = "questionAnswer_id")
+    @Column(name = "id")
     private String id;
  
 //    @Column(name = "course_id", nullable = false)
@@ -43,13 +43,11 @@ public class QuestionAnswerEntity {
     @Column(name = "timestamp", nullable = true)
     private Date timestamp;
 
-    @Column(name = "qAudioLen", nullable = false)
-	private float qAudioLen;
-    @Column(name = "aAudioLen", nullable = false)
-	private float aAudioLen;
+    @Column(name = "audioLen", nullable = false)
+	private float audioLen;
 
 	@ManyToOne
-    @JoinColumn(name = "lecture")
+    @JoinColumn(name = "lecture_id")
     private LectureEntity lecture;
 
    
@@ -63,7 +61,7 @@ public class QuestionAnswerEntity {
 
 
 	public QuestionAnswerEntity(String id, String qTranscript,
-			String aTranscript, int likes, Date timestamp, float qAudioLen, float aAudioLen) {
+			String aTranscript, int likes, Date timestamp, float audioLen) {
 		super();
 		this.id = id;
 //		this.courseId = courseId;
@@ -73,8 +71,7 @@ public class QuestionAnswerEntity {
 		this.aTranscript = aTranscript;
 		this.likes = likes;
 		this.timestamp = timestamp;
-		this.qAudioLen = qAudioLen;
-		this.aAudioLen = aAudioLen;
+		this.audioLen = audioLen;
 	}
 
 
@@ -147,23 +144,14 @@ public class QuestionAnswerEntity {
 	}
 
 
-	public float getqAudioLen() {
-		return qAudioLen;
+
+	public float getAudioLen() {
+		return audioLen;
 	}
 
 
-	public void setqAudioLen(float qAudioLen) {
-		this.qAudioLen = qAudioLen;
-	}
-
-
-	public float getaAudioLen() {
-		return aAudioLen;
-	}
-
-
-	public void setaAudioLen(float aAudioLen) {
-		this.aAudioLen = aAudioLen;
+	public void setAudioLen(float audioLen) {
+		this.audioLen = audioLen;
 	}
 
     public String getqTranscript() {
@@ -198,7 +186,7 @@ public class QuestionAnswerEntity {
 	@Override
 	public String toString() {
 		return "QuestionAnswerEntity [id=" + id + ", qTranscript=" + qTranscript + ", aTranscript=" + aTranscript + ", likes=" + likes
-				+ ", timestamp=" + timestamp + ", qAudioLen=" + qAudioLen + ", aAudioLen=" + aAudioLen + ", lecture="
+				+ ", timestamp=" + timestamp + ", audioLen=" + audioLen + ", lecture="
 				+ lecture + "]";
 	}
 

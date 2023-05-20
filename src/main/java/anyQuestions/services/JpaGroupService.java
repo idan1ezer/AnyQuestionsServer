@@ -14,12 +14,12 @@ import anyQuestions.data.crud.GroupCrud;
 import anyQuestions.logic.GroupService;
 
 @Service
-public class jpaGroupService implements GroupService {
+public class JpaGroupService implements GroupService {
 	private GroupCrud crud;
 	private GroupConverter converter;
 
 	@Autowired
-	public jpaGroupService(GroupConverter converter,GroupCrud crud) {
+	public JpaGroupService(GroupConverter converter, GroupCrud crud) {
 		this.converter = converter;
 		this.crud = crud;
 	} 

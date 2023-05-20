@@ -23,10 +23,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Entity
-@Table(name = "Groups_Table")
+@Table(name = "Groups")
 public class GroupEntity {
     @Id
-    @Column(name = "group_id")
+    @Column(name = "id")
     private String id;
 
     @Column(name = "lecturer_id", nullable = false)

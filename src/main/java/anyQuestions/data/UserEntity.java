@@ -20,11 +20,11 @@ import javax.persistence.TemporalType;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name = "Users_Table")
+@Table(name = "Users")
 public class UserEntity {
 
 	 	@Id
-	    @Column(name = "user_id")
+	    @Column(name = "id")
 	    private String userId;
 	    @Column(name = "username", nullable = false)
 	    private String username;

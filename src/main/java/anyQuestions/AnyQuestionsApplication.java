@@ -1,14 +1,11 @@
 package anyQuestions;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 import anyQuestions.data.CourseEntity;
 import anyQuestions.data.GroupEntity;
@@ -20,8 +17,6 @@ import anyQuestions.data.crud.GroupCrud;
 import anyQuestions.data.crud.LectureCrud;
 import anyQuestions.data.crud.QuestionAnswerCrud;
 import anyQuestions.data.crud.UserCrud;
-import anyQuestions.services.JpaUserService;
-import anyQuestions.services.jpaGroupService;
 
 @SpringBootApplication
 public class AnyQuestionsApplication {
@@ -35,13 +30,13 @@ public class AnyQuestionsApplication {
 	    LectureCrud lcrud = configurableApplicationContext.getBean(LectureCrud.class);
 	    QuestionAnswerCrud qcrud = configurableApplicationContext.getBean(QuestionAnswerCrud.class);
 	    
-	    QuestionAnswerEntity q1 = new QuestionAnswerEntity("11111101QA1", "What is Infinitesimal Math??", "Infinitesimal Math is a branch of mathematics that deals with infinitesimal quantities.", 5, null, 1, 1);
-	    QuestionAnswerEntity q2 = new QuestionAnswerEntity("11111101QA2", "What is an infinitesimal?", "An infinitesimal is a quantity that is extremely small, but not zero.", 4, null, 2, 2);
-	    QuestionAnswerEntity q3 = new QuestionAnswerEntity("11111102QA1", "Who is considered the father of Infinitesimal Math?", "The father of Infinitesimal Math is considered to be the German mathematician Gottfried Wilhelm Leibniz.", 3, null, 3, 3);
-	    QuestionAnswerEntity q4 = new QuestionAnswerEntity("11111103QA1", "What is the concept of infinitesimal calculus?", "The concept of infinitesimal calculus involves using infinitesimals to calculate the behavior of functions and curves.", 2, null, 4, 4);
-	    QuestionAnswerEntity q5 = new QuestionAnswerEntity("11111103QA2", "How is Infinitesimal Math different from traditional calculus?", "Infinitesimal Math is different from traditional calculus in that it relies on the use of infinitesimals rather than limits.", 1, null, 5, 5);
-	    QuestionAnswerEntity q6 = new QuestionAnswerEntity("11111103QA3", "What is the controversy surrounding the use of infinitesimals in math?", "The controversy surrounding the use of infinitesimals in math stems from their lack of rigor and formal definition.", 5, null, 1, 1);
-	    QuestionAnswerEntity q7 = new QuestionAnswerEntity("11112201QA1", "How did mathematicians resolve the controversy over infinitesimals?", "How did mathematicians resolve the controversy over infinitesimals?", 4, null, 2, 2);
+	    QuestionAnswerEntity q1 = new QuestionAnswerEntity("11111101QA1", "What is Infinitesimal Math??", "Infinitesimal Math is a branch of mathematics that deals with infinitesimal quantities.", 5, null, 1);
+	    QuestionAnswerEntity q2 = new QuestionAnswerEntity("11111101QA2", "What is an infinitesimal?", "An infinitesimal is a quantity that is extremely small, but not zero.", 4, null, 2);
+	    QuestionAnswerEntity q3 = new QuestionAnswerEntity("11111102QA1", "Who is considered the father of Infinitesimal Math?", "The father of Infinitesimal Math is considered to be the German mathematician Gottfried Wilhelm Leibniz.", 3, null, 3);
+	    QuestionAnswerEntity q4 = new QuestionAnswerEntity("11111103QA1", "What is the concept of infinitesimal calculus?", "The concept of infinitesimal calculus involves using infinitesimals to calculate the behavior of functions and curves.", 2, null, 4);
+	    QuestionAnswerEntity q5 = new QuestionAnswerEntity("11111103QA2", "How is Infinitesimal Math different from traditional calculus?", "Infinitesimal Math is different from traditional calculus in that it relies on the use of infinitesimals rather than limits.", 1, null, 5);
+	    QuestionAnswerEntity q6 = new QuestionAnswerEntity("11111103QA3", "What is the controversy surrounding the use of infinitesimals in math?", "The controversy surrounding the use of infinitesimals in math stems from their lack of rigor and formal definition.", 5, null, 1);
+	    QuestionAnswerEntity q7 = new QuestionAnswerEntity("11112201QA1", "How did mathematicians resolve the controversy over infinitesimals?", "How did mathematicians resolve the controversy over infinitesimals?", 4, null, 2);
 //	    QuestionAnswerEntity q8 = new QuestionAnswerEntity("11112202QA1", "What is a hyperreal number?", "A hyperreal number is a number that is larger than any real number but smaller than infinity.", 3, null, 3, 3);
 //	    QuestionAnswerEntity q9 = new QuestionAnswerEntity("11112202QA2", "How are hyperreal numbers used in Infinitesimal Math?", "Hyperreal numbers are used in Infinitesimal Math to provide a rigorous foundation for the use of infinitesimals.", 2, null, 4, 4);
 //	    QuestionAnswerEntity q10 = new QuestionAnswerEntity("11112203QA1", "What is the transfer principle?", "The transfer principle is a key principle of non-standard analysis that allows statements about infinitesimals to be transferred to statements about real numbers.", 1, null, 5, 5);
