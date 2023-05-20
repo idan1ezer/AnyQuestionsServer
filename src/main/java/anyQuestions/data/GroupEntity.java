@@ -22,8 +22,8 @@ import org.hibernate.annotations.IndexColumn;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
+@Table(name = "groups")
 @Entity
-@Table(name = "Groups")
 public class GroupEntity {
     @Id
     @Column(name = "id")
@@ -39,7 +39,7 @@ public class GroupEntity {
     @JoinColumn(name = "course_id", insertable = false, updatable = false)
     private CourseEntity course;
 
-    @ManyToMany(mappedBy = "groups")
+    @ManyToMany(mappedBy = "groupss")
     private List<UserEntity> users = new ArrayList<>();
     
     @OneToMany(mappedBy = "group")

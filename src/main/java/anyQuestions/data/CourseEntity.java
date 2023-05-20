@@ -18,7 +18,7 @@ import javassist.expr.NewArray;
 
 
 @Entity
-@Table(name = "Courses")
+@Table(name = "courses")
 public class CourseEntity {
 	@Id
 	@Column(name = "id")

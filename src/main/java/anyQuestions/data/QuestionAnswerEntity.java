@@ -14,7 +14,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
-@Table(name = "Questions_Answers")
+@Table(name = "questions_answers")
 public class QuestionAnswerEntity {
 	
 

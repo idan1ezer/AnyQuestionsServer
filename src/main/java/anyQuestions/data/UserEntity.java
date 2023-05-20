@@ -20,7 +20,7 @@ import javax.persistence.TemporalType;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name = "Users")
+@Table(name = "users")
 public class UserEntity {
 
 	 	@Id
@@ -44,7 +44,7 @@ public class UserEntity {
 	            name = "groups_users",
 	            joinColumns = @JoinColumn(name = "user_id",nullable = true),
 	            inverseJoinColumns = @JoinColumn(name = "group_id"))
-	    private List<GroupEntity> groups = new ArrayList<>();
+	    private List<GroupEntity> groupss = new ArrayList<>();
 	
 	public UserEntity() {
 		
@@ -59,6 +59,7 @@ public class UserEntity {
 		this.password = password;
 		this.type = type;
 		this.active = true;
+		setCreatedTimestamp(new Date());
 	}
 
 
@@ -114,21 +115,21 @@ public class UserEntity {
 	}
 
 	public List<GroupEntity> getGroups() {
-		return groups;
+		return groupss;
 	}
 
 	public void setGroups(List<GroupEntity> groups) {
-		this.groups = groups;
+		this.groupss = groups;
 	}
 	
 	public void addGroup(GroupEntity g) {
-		this.groups.add(g);
+		this.groupss.add(g);
 	}
 
 	@Override
 	public String toString() {
 		return "UserEntity [userId=" + userId + ", username=" + username + ", password=" + password + ", type=" + type
-				+ ", active=" + active + ", createdTimestamp=" + createdTimestamp + ", groups=" + groups + "]";
+				+ ", active=" + active + ", createdTimestamp=" + createdTimestamp + ", groups=" + groupss + "]";
 	}
 
 

@@ -7,7 +7,7 @@ import javax.persistence.MapsId;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "GroupsUsers_Table")
+@Table(name = "groups_users")
 public class GroupsUsersEntity {
 
     @EmbeddedId
