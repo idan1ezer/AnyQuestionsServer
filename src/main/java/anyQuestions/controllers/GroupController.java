@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 import anyQuestions.boundaries.GroupBoundary;
 import anyQuestions.services.JpaGroupService;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @RestController
 public class GroupController {
 	JpaGroupService service;
@@ -35,4 +38,6 @@ public class GroupController {
 //    public GroupBoundary[] getAllGroupsByCourseId(@PathVariable (value = "courseId") String courseId) {
 //        return this.service.findAllGroupsByCourseId(courseId).toArray(new GroupBoundary[0]);
 //    }
+
+
 }

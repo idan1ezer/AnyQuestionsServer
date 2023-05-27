@@ -141,8 +141,8 @@ public class AnyQuestionsApplication {
 	    List<GroupEntity> groups1 = Arrays.asList(g1,g2,g3);
 	    List<GroupEntity> groups2 = Arrays.asList(g4);
 	    //List<GroupEntity> groups3 = Arrays.asList(g5,g6,g7);
-	    c1.setGroups(groups1);
-	    c2.setGroups(groups2);
+	    c1.setGroupsss(groups1);
+	    c2.setGroupsss(groups2);
 	    //c3.setGroups(groups3);
 	    g1.setCourse(c1);
 	    g2.setCourse(c1);
@@ -251,10 +251,10 @@ public class AnyQuestionsApplication {
 //	    g5.setLectures(Arrays.asList(l13,l14));
 //	    g6.setLectures(Arrays.asList(l15));
 //	    g7.setLectures(Arrays.asList(l16,l17));
-	    g1.setLectures(Arrays.asList(l1));
-	    g2.setLectures(Arrays.asList(l2));
-	    g3.setLectures(Arrays.asList(l3));
-	    g4.setLectures(Arrays.asList(l4));
+	    g1.setLecturess(Arrays.asList(l1));
+	    g2.setLecturess(Arrays.asList(l2));
+	    g3.setLecturess(Arrays.asList(l3));
+	    g4.setLecturess(Arrays.asList(l4));
 //	    g5.setLectures(Arrays.asList(l5));
 //	    g6.setLectures(Arrays.asList(l6));
 //	    g7.setLectures(Arrays.asList(l7));

@@ -8,13 +8,9 @@ import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
-import javassist.expr.NewArray;
 
 
 @Entity
@@ -26,7 +22,7 @@ public class CourseEntity {
 	@Column(name = "name", nullable = false)
     private String name;
 	@OneToMany(mappedBy = "course", cascade = CascadeType.ALL, orphanRemoval = true)
-	private List<GroupEntity> groups = new ArrayList<>();
+	private List<GroupEntity> groupsss = new ArrayList<>();
     
 
     
@@ -55,17 +51,17 @@ public class CourseEntity {
         this.name = name;
     }
 
-	public List<GroupEntity> getGroups() {
-		return groups;
+	public List<GroupEntity> getGroupsss() {
+		return groupsss;
 	}
 
-	public void setGroups(List<GroupEntity> groups) {
-		this.groups = groups;
+	public void setGroupsss(List<GroupEntity> groupsss) {
+		this.groupsss = groupsss;
 	}
 
 	@Override
 	public String toString() {
-		return "CourseEntity [id=" + id + ", name=" + name + ", groups=" + groups + "]";
+		return "CourseEntity [id=" + id + ", name=" + name + ", groups=" + groupsss + "]";
 	}
 
 

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 import anyQuestions.boundaries.CourseBoundary;
 import anyQuestions.boundaries.GroupBoundary;
 import anyQuestions.data.CourseEntity;
-import anyQuestions.data.GroupEntity;
 
 
 @Component
@@ -39,8 +38,8 @@ public class CourseConverter {
 		boundary.setName(entity.getName());
 		List<GroupBoundary>groupsBoundaries = new ArrayList<>();
 		GroupConverter converter = new GroupConverter();
-		for(int i=0; i<entity.getGroups().size();i++) {
-			groupsBoundaries.add(converter.toBoundary(entity.getGroups().get(i)));
+		for(int i = 0; i<entity.getGroupsss().size(); i++) {
+			groupsBoundaries.add(converter.toBoundary(entity.getGroupsss().get(i)));
 		}
 		boundary.setGroups(groupsBoundaries);
 

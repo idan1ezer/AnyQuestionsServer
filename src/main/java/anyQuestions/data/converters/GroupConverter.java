@@ -31,8 +31,8 @@ public class GroupConverter {
 		boundary.setCourseId(entity.getCourseId());
 		LectureConverter converter = new LectureConverter();
 		List<LectureBoundary>boundaries = new ArrayList<>();
-		for(int i=0; i<entity.getLectures().size();i++) {
-			boundaries.add(converter.toBoundary(entity.getLectures().get(i)));
+		for(int i = 0; i<entity.getLecturess().size(); i++) {
+			boundaries.add(converter.toBoundary(entity.getLecturess().get(i)));
 		}
 		boundary.setLectures(boundaries);
 		 

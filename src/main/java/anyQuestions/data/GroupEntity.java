@@ -1,25 +1,17 @@
 package anyQuestions.data;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OrderColumn;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.IndexColumn;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
 
 @Table(name = "groups")
@@ -43,7 +35,7 @@ public class GroupEntity {
     private List<UserEntity> users = new ArrayList<>();
     
     @OneToMany(mappedBy = "group")
-    private List<LectureEntity> lectures = new ArrayList<>();
+    private List<LectureEntity> lecturess = new ArrayList<>();
 
     public GroupEntity() {}
 
@@ -93,12 +85,12 @@ public class GroupEntity {
         this.users = users;
     }
     
-    public List<LectureEntity> getLectures() {
-        return lectures;
+    public List<LectureEntity> getLecturess() {
+        return lecturess;
     }
 
-    public void setLectures(List<LectureEntity> lectures) {
-        this.lectures = lectures;
+    public void setLecturess(List<LectureEntity> lecturess) {
+        this.lecturess = lecturess;
     }
 
     @Override
