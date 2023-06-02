@@ -31,11 +31,11 @@ public class QuestionAnswerController {
 	}
 	
 	@RequestMapping(
-			path = "/anyquestions/live/getQA/{lectureID}",
+			path = "/anyQuestions/live/getQA/{lectureID}",
 			method = RequestMethod.GET,
 			produces = MediaType.APPLICATION_JSON_VALUE)
-	public QuestionAnswerBoundary[] getAllQuestions(@PathVariable("lectureID") String lectureID) {
-		
+	public QuestionAnswerBoundary[] getAllQuestions(@PathVariable("lectureID") long lectureID) {
+
 		return this.service.getAllQuestions(lectureID).toArray(new QuestionAnswerBoundary[0]);
 	}
 }

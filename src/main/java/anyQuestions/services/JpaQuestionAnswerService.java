@@ -29,7 +29,7 @@ public class JpaQuestionAnswerService implements QuestionAnswerService{
 
 	@Override
 	@Transactional(readOnly = true)
-	public List<QuestionAnswerBoundary> getAllQuestions(String lectureID) {
+	public List<QuestionAnswerBoundary> getAllQuestions(long lectureID) {
 		return this.crud.findAllByLectureID(lectureID)
 				.stream()
 				.map(this.converter::toBoundary)

@@ -9,6 +9,6 @@ public interface QuestionAnswerService {
 	//public QuestionAnswerBoundary getNewQuestion();
 	public QuestionAnswerBoundary storeQuestionAnswer(QuestionAnswerBoundary newQuestion);
 	
-	public List<QuestionAnswerBoundary> getAllQuestions(String lectureID);
+	public List<QuestionAnswerBoundary> getAllQuestions(long lectureID);
 	
 }
